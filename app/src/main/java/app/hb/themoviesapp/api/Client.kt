@@ -1,4 +1,4 @@
-package app.hb.thenewsapp.api
+package app.hb.themoviesapp.api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

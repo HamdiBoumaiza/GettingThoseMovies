@@ -1,4 +1,4 @@
-package app.hb.thenewsapp.utils
+package app.hb.themoviesapp.utils
 
 import android.content.Context
 import android.widget.Toast

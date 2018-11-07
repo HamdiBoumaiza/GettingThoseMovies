@@ -1,4 +1,4 @@
-package app.hb.thenewsapp.model
+package app.hb.themoviesapp.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

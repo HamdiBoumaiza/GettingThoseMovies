@@ -1,12 +1,10 @@
-package app.hb.thenewsapp.viewModel
+package app.hb.themoviesapp.viewModel
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
-import app.hb.thenewsapp.IUserClickListener
-import app.hb.thenewsapp.repository.MoviesRepository
-import app.hb.thenewsapp.adapter.UserAdapter
-import app.hb.thenewsapp.model.MovieModel
+import app.hb.themoviesapp.repository.MoviesRepository
+import app.hb.themoviesapp.model.MovieModel
 
 
 class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
@@ -27,7 +25,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
 
     /*
-    fun getAdapter(): UserAdapter {
+    fun getAdapter(): MovieAdapter {
         return adapter
     }
 
@@ -37,7 +35,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
 
     fun init(){
-       // adapter = UserAdapter(this, this, arrayMovies!!)
+       // adapter = MovieAdapter(this, this, arrayMovies!!)
     }
 
 */

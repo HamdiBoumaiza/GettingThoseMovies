@@ -1,11 +1,11 @@
-package app.hb.thenewsapp.repository
+package app.hb.themoviesapp.repository
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
-import app.hb.thenewsapp.BuildConfig
-import app.hb.thenewsapp.api.Client
-import app.hb.thenewsapp.api.Services
-import app.hb.thenewsapp.model.MovieModel
+import app.hb.themoviesapp.BuildConfig
+import app.hb.themoviesapp.api.Client
+import app.hb.themoviesapp.api.Services
+import app.hb.themoviesapp.model.MovieModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import timber.log.Timber

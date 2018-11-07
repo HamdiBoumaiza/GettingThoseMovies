@@ -1,4 +1,4 @@
-package app.hb.thenewsapp.utils
+package app.hb.themoviesapp.utils
 
 import android.databinding.BindingAdapter
 import android.graphics.drawable.Drawable

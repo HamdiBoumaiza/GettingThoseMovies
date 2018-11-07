@@ -1,4 +1,4 @@
-package app.hb.thenewsapp
+package app.hb.themoviesapp.view
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -7,26 +7,28 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import app.hb.thenewsapp.adapter.UserAdapter
-import app.hb.thenewsapp.databinding.ActivityMainBinding
-import app.hb.thenewsapp.model.MovieModel
-import app.hb.thenewsapp.utils.toast
-import app.hb.thenewsapp.viewModel.MainActivityViewModel
+import app.hb.themoviesapp.R
+import app.hb.themoviesapp.adapter.MovieAdapter
+import app.hb.themoviesapp.callback.IUserClickListener
+import app.hb.themoviesapp.databinding.ActivityMainBinding
+import app.hb.themoviesapp.model.MovieModel
+import app.hb.themoviesapp.utils.toast
+import app.hb.themoviesapp.viewModel.MainActivityViewModel
 
 
 class MainActivity : AppCompatActivity(), IUserClickListener {
-    override fun clickTitle(postion: Int) {
-        this.toast("title clicked "+postion)
+    override fun clickTitle(movieModel: MovieModel) {
+        this.toast("Movie Title :: " + movieModel.title)
     }
 
-    override fun clickImage(postion: Int) {
-        this.toast("image clicked "+postion)
+    override fun clickImage(position: Int) {
+        this.toast("image clicked " + position)
     }
 
 
     private lateinit var activityBinding: ActivityMainBinding
     private lateinit var mainActivityViewModel: MainActivityViewModel
-    private lateinit var adapter: UserAdapter
+    private lateinit var adapter: MovieAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +37,7 @@ class MainActivity : AppCompatActivity(), IUserClickListener {
 
         mainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
 
-
-
         subscribeToModel()
-
     }
 
 
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity(), IUserClickListener {
         val dividerItemDecoration = DividerItemDecoration(activityBinding.rvSources.getContext(), linearLayoutManager.orientation)
         activityBinding.rvSources.addItemDecoration(dividerItemDecoration)
 
-        adapter = UserAdapter(this, arrayMovies)
+        adapter = MovieAdapter(this, arrayMovies)
         activityBinding.rvSources.adapter = adapter
 
     }

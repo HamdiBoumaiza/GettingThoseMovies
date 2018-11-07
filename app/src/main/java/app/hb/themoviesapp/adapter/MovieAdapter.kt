@@ -1,18 +1,17 @@
-package app.hb.thenewsapp.adapter
+package app.hb.themoviesapp.adapter
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import app.hb.thenewsapp.BR
-import app.hb.thenewsapp.IUserClickListener
-import app.hb.thenewsapp.R
-import app.hb.thenewsapp.databinding.ItemSourceBinding
-import app.hb.thenewsapp.model.MovieModel
+import app.hb.themoviesapp.BR
+import app.hb.themoviesapp.callback.IUserClickListener
+import app.hb.themoviesapp.R
+import app.hb.themoviesapp.databinding.ItemSourceBinding
+import app.hb.themoviesapp.model.MovieModel
 
-class UserAdapter(var monClickListener: IUserClickListener,
-                  var mListUser: List<MovieModel>) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class MovieAdapter(var monClickListener: IUserClickListener,
+                   var mListUser: List<MovieModel>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -31,13 +30,11 @@ class UserAdapter(var monClickListener: IUserClickListener,
 
     }
 
-
-    inner class ViewHolder(view: ItemSourceBinding) : RecyclerView.ViewHolder(view.root), View.OnClickListener {
+    inner class ViewHolder(view: ItemSourceBinding) : RecyclerView.ViewHolder(view.root) {
         private var itemSourceBinding: ItemSourceBinding
 
         init {
             itemSourceBinding = view
-            view.nom.setOnClickListener(this)
         }
 
         fun bind(model: MovieModel,position: Int) {
@@ -45,13 +42,6 @@ class UserAdapter(var monClickListener: IUserClickListener,
             itemSourceBinding.setVariable(BR.position,position)
             itemSourceBinding.setVariable(BR.clickListener,monClickListener)
         }
-
-        override fun onClick(v: View) {
-            when (v.id) {
-                R.id.nom -> monClickListener.clickTitle(adapterPosition)
-            }
-        }
-
     }
 
 

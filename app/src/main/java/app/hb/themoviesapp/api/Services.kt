@@ -1,6 +1,6 @@
-package app.hb.thenewsapp.api
+package app.hb.themoviesapp.api
 
-import app.hb.thenewsapp.api.response.TopMoviesResponse
+import app.hb.themoviesapp.api.response.TopMoviesResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

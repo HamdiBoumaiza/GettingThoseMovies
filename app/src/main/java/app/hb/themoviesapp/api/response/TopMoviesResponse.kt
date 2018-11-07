@@ -1,6 +1,6 @@
-package app.hb.thenewsapp.api.response
+package app.hb.themoviesapp.api.response
 
-import app.hb.thenewsapp.model.MovieModel
+import app.hb.themoviesapp.model.MovieModel
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import java.util.*

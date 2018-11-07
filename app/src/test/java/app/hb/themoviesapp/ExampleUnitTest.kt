@@ -1,4 +1,4 @@
-package app.hb.thenewsapp
+package app.hb.themoviesapp
 
 import org.junit.Test
 

@@ -7,7 +7,7 @@
     <data>
         <variable
             name="movies"
-            type="app.hb.thenewsapp.model.MovieModel" />
+            type="app.hb.themoviesapp.model.MovieModel" />
 
         <variable
             name="position"
@@ -15,7 +15,7 @@
 
         <variable
             name="clickListener"
-            type="app.hb.thenewsapp.IUserClickListener" />
+            type="app.hb.themoviesapp.callback.IUserClickListener" />
     </data>
 
     <LinearLayout
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="@{movies.title}"
                 android:textSize="16sp"
-                android:onClick="@{() -> clickListener.clickTitle(position)}"
+                android:onClick="@{() -> clickListener.clickTitle(movies)}"
 
                 android:textStyle="bold"
                 tools:text="nom" />

@@ -1,4 +1,4 @@
-package app.hb.thenewsapp
+package app.hb.themoviesapp
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
